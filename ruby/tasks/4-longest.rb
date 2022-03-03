@@ -6,5 +6,6 @@
  # @returns {String} The longest string from within the input array.
 #
 def longest_string(strings)
-
+ array = strings.select {|element| element.class == String}
+ return array.max_by(&:length)
 end
